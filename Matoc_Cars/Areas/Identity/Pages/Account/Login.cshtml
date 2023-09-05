@@ -1,0 +1,308 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Увійти";
+}
+
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap" rel="stylesheet">
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<head>
+    <style>
+        *{
+            margin-top: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;  
+              
+        }
+        
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background:url('https://img3.akspic.ru/crops/8/1/5/4/34518/34518-avtomobil-sportivnyj_avtomobil-mercedes_benz_sls_amg-mersedes_amg-mercedes_benz-1920x1080.jpg') no-repeat ;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            
+        }
+        
+        header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index:99;
+        
+        }
+        
+        .logo {
+            font-size: 2em;
+            color: #fff;
+            user-select: none;
+            font-weight: 500;
+        }
+        
+        .linkk{
+            position: relative;
+            font-size: 1.1em;
+            color: #fff;
+            font-weight: 500;
+            margin-left: 40px;
+            transition: color 0.5s;
+            text-decoration: none  ;
+        }
+        
+        .linkk:after{
+            content: '';
+            position: absolute;
+            left:0;
+            bottom: -6px;
+            width: 100%;
+            height: 3px;
+            background: #fff;
+            border-radius: 5px;
+            transform-origin:right;
+            transform: scaleX(0);
+            transition: transform .5s;
+        
+        }
+        
+        .linkk:hover:after{
+            transform-origin:left;
+            transform: scaleX(1);
+        }
+        
+        .linkk:hover{
+            color: white;
+        }
+        
+        .wrapper{
+            width: 400px;
+            height: 440px;
+            background: transparent;
+            border: 2px solid rgb(255, 255, 255, .5);
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 30px rgba(0,0,0, .5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .wrapper .form-box{
+            width: 100%;
+            padding: 40px;
+        }
+        
+        .wrapper .icon-close{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 45px;
+            height: 45px;
+            background: #ffffff;
+            font-size: 2em;
+            color: #162938;
+            display: flex;
+            justify-content: center ;
+            align-items: center;
+            border-bottom-left-radius: 20px;
+            cursor: pointer;
+            z-index: 1;
+        }
+        
+        .form-box h2{
+            font-size: 2em;
+            color: #ffffff;
+            text-align: center;
+            font-weight: 900;
+        }
+        
+        .input-box{
+            position: relative;
+            width: 100%;
+            height: 50px;
+            border-bottom: 2px solid #162938;
+            margin: 30px 0;
+        }
+        
+        .input-box label {
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            font-size: 1em;
+            color:  #ffffff;
+            font-weight: 500;
+            pointer-events: none;
+            transition: .3s ;
+        }
+        
+        .input-box input:focus~label,
+        .input-box input:valid~label{
+            top:-5px;
+        }
+        
+        .input-box input{
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 1em;
+            color: #ffffff;    
+            padding: 0 35px 0 5px;
+        }
+        
+        .input-box .icon{
+            position: absolute;
+            right: 8px;
+            font-size: 1em;
+            color:  #ffffff;
+            line-height: 57px;
+        }
+        
+        .remember-forgot{
+            font-size: .9em;
+            color: #ffffff;
+            font-weight: 500;
+            margin: -15px 0 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+         .remember-forgot label input {
+            accent-color: #ffffff;
+            margin-right: 3px;
+         }
+         
+         .remember-forgot a{
+            color: #ffffff;
+            text-decoration: none;
+            padding-left: 53px;
+         }
+         
+         .remember-forgot a:hover{
+            text-decoration: underline;
+         }
+         
+         .btn{
+         width: 100%;
+         height: 45px;
+         background: #fff;
+         border: none;
+         outline: none;
+         border-radius: 6px;
+         cursor: pointer;
+         font-size: 1em;
+         color:  #162938;
+         font-weight: 900;
+        }
+        
+        .login-register{
+            font-size: .9em ;
+            color: #ffffff;
+            text-align: center;
+            font-weight: 500;
+            margin: 25px 0 10px;
+        }
+        
+        .login-register p a {
+            color:  #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .login-register p a:hover{
+            text-decoration: underline;
+        }
+        
+        .register-link{
+            margin-left: 30px;
+        }
+        
+        .blockk{
+            display: flex;
+            justify-content: center;
+        }
+        
+    </style>
+</head>
+
+<header>
+            <h2 class="logo">MatokCars</h2>
+            <nav class="navigation">
+                <a asp-controller="AboutUs" asp-action="Index" class="linkk" asp-controller="Home" asp-action="Index">Головна</a>
+                <a  class="linkk" >Про нас</a>
+                <a class="linkk" href="">Шось</a>
+                <a class="linkk" href="">Шось2</a>
+            </nav>
+</header>
+
+
+<div class="blockk">
+    <div class="wrapper">
+        <span class="icon-close">
+            <ion-icon name="close-outline"></ion-icon>
+        </span>        
+        
+        <div class="form-box login">
+            <h2>Увійти</h2> 
+            <form id="account" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input asp-for="Input.Email"  type="email" autocomplete="username" required />
+                    <label asp-for="Input.Email">Почта</label>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>  
+                    <input asp-for="Input.Password" type="password"  autocomplete="current-password" required />
+                    <label asp-for="Input.Password">Пароль</label>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                
+                <div class="remember-forgot">
+                    <label asp-for="Input.RememberMe">
+                        <input type="checkbox" asp-for="Input.RememberMe" />
+                        @Html.DisplayNameFor(m => m.Input.RememberMe)
+                    </label>
+                </div>
+                
+                <div>
+                    <button id="login-submit" type="submit" class="btn">Увійти</button>
+                </div>
+                <div class="login-register">
+                   <p>Не маєте акаунту ?<a asp-area="Identity" asp-page="/Account/Register" class="register-link">Зареєструватися</a></p>
+                 </div>
+                    </form>
+               </div>
+    </div>
+</div>
+       
+    
+
+
+    @section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

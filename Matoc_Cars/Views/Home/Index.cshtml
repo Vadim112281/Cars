@@ -1,8 +1,22 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Головна";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!--Styles-->
+<link rel="stylesheet" href="css/header.css" asp-append-version="true">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap" rel="stylesheet">
+
+<header>
+    <h2 class="logo">MatokCars</h2>
+    <nav class="navigation">
+        <a class="linkk" asp-controller="Home" asp-action="Index">Головна</a>
+        <a  asp-controller="AboutUs" asp-action="Index" class="linkk">Про нас</a>
+        <a class="linkk" href="">Шось</a>
+        <a class="linkk" href="">Шось2</a>
+        <partial name="_LoginPartial"/>
+    </nav>
+</header>
