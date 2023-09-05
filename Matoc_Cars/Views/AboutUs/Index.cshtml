@@ -12,10 +12,9 @@
 
 
 <header>
-    <h2 class="logo">MatokCars</h2>
+    <h2 class="logo"><a asp-controller="Home" asp-action="Index">MatokCars</a></h2>
     <nav class="navigation">
         <a class="linkk" asp-controller="Home" asp-action="Index">Головна</a>
-        
         <a class="linkk" href="">Шось</a>
         <a class="linkk" href="">Шось2</a>
         <partial name="_LoginPartial"/>
@@ -27,12 +26,17 @@
     <h1>Про нас</h1>
     <p class="text">Ласкаво просимо до <span class="Matok">MatokCars</span> - вашого надійного партнера у світі автомобільних покупок!<br>
                     
-        <span class="Matok">MatokCars</span> - це компанія, яка зосереджена на наданні найкращих можливих варіантів автомобільних покупок для наших клієнтів. Наша місія - зробити процес придбання автомобіля простим, безпечним і задовільним. 
-
-                    
+        <span class="Matok">MatokCars</span> - це компанія, яка зосереджена на наданні найкращих можливих варіантів автомобільних покупок для наших клієнтів. Наша місія - зробити процес придбання автомобіля простим, безпечним і задовільним.
         Довірте <span>MatokCars</span> своїй мрії про ідеальний автомобіль, і ми зробимо все можливе, щоб зробити її реальністю. Долучіться до нашої родини клієнтів і відчуйте різницю в обслуговуванні та якості!
-                    
-        Дякуємо за вашу довіру і сподіваємося побачити вас в нашому автосалоні найближчим часом.</p>
+        Дякуємо за вашу довіру і сподіваємося побачити вас в нашому автосалоні найближчим часом.
+    </p>
+    
+    <div class="photo__container">
+          <img class="photo" src="css/Photo/bmw_xm.jpg" alt="">
+          <img class="photo__2" src="css/Photo/mers_s.jpg" alt="">        
+    </div>
+
+   
 </div>
 
 <footer class="footer">
