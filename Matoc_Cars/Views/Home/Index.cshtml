@@ -9,7 +9,7 @@
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700;900&display=swap" rel="stylesheet">
 
 <header>
     <h2 class="logo"><a asp-controller="Home" asp-action="Index">MatokCars</a></h2>
@@ -22,17 +22,48 @@
     </nav>
 </header>
 
-<div class="contentik">
-    <div class="order__car">
-        <h3 class="order__title">Замовити машину</h3>
-        <p class="order__text">Якщо нема в наявності машини, не переживайте!</p>
-        <p>Замовляйте автомобіль мрії прямо зараз!</p>
-        <button>Замовити</button>
+<div class="content">
+    
+    <div class="order">
+        <div class="order__back">
+            <div class="back-img">
+                <div class="order__car">
+                    <h3 class="order__car-title">Замовляйтe машину прям зараз</h3>
+                    <p class="order__car-text-1">Якщо нема автомобіля в наявності, не переживайте!</p>
+                </div>
+                <div class="btn">
+                    <a class="order__car-btn">Замовити автомобіль</a>
+                </div>
+            </div>    
+        </div>
     </div>
     
-    <div class="buy__car">
-        <h3 class="order__text">Замовити машину</h3>
-        <p>Якщо нема в наявності машини, не переживайте!</p>
-        <p>Замовляйте автомобіль мрії прямо зараз!</p>
+    <div class="order">
+        <div class="order__back-2">
+            <div class="back-img">
+                <div class="order__car">
+                    <h3 class="order__car-title">Додати машину на продаж</h3>
+                    <p class="order__car-text-2">Якщо хочете продати свій автомобіль, це не проблема!</p>
+                </div>
+                <div class="btn">
+                    <a class="order__car-btn">Продати автомобіль</a>
+                </div>
+            </div>    
+        </div>
     </div>    
+    
+    <div class="order">
+        <div class="order__back-3">
+            <div class="back-img">
+                <div class="order__car">
+                    <h3 class="order__car-title">Машини в наявності</h3>
+                    <p class="order__car-text-3">Наша компанія продає машини теж!</p>
+                </div>
+                <div class="btn">
+                    <a class="order__car-btn">Подивитися автомобілі компанії</a>
+                </div>
+            </div>    
+        </div>
+    </div>    
+
 </div>
