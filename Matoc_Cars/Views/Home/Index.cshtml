@@ -7,18 +7,21 @@
 <link rel="stylesheet" href="css/main_page.css" asp-append-version="true">
 <link rel="stylesheet" href="css/about_us.css" asp-append-version="true">
 
+<link rel="website icon" type="jpg" href="css/Photo/logo.jpg"> 
+
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700;900&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap" rel="stylesheet">
+    
 <header>
-    <h2 class="logo"><a asp-controller="Home" asp-action="Index">MatokCars</a></h2>
+    <h1 class="logo"><a asp-controller="Home" asp-action="Index">MatokCars</a></h1>
     <nav class="navigation">
-        <a asp-controller="Home" asp-action="Index" class="linkk" >Головна</a>
-        <a  asp-controller="AboutUs" asp-action="Index" class="linkk">Про нас</a>
-        <a class="linkk" href="">Шось</a>
-        <a class="linkk" href="">Шось2</a>
+        <a asp-controller="Home" asp-action="Index" class="linkk">Головна</a>
+        <a asp-controller="AboutUs" asp-action="Index" class="linkk">Про нас</a>
+        <a class="linkk" href="">Замовити</a>
+        <a class="linkk" href="">Продати</a>
+        <a class="linkk" href="">В продажі</a>
         <partial name="_LoginPartial"/>
     </nav>
 </header>
@@ -33,7 +36,7 @@
                     <p class="order__car-text-1">Якщо нема автомобіля в наявності, не переживайте!</p>
                 </div>
                 <div class="btn-1">
-                    <a class="order__car-btn">Замовити автомобіль</a>
+                    <a asp-controller="OrderCar" asp-action="Index" class="order__car-btn">Замовити автомобіль</a>
                 </div>
             </div>    
         </div>

@@ -2,7 +2,7 @@
     margin-top: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
@@ -33,16 +33,26 @@ header{
 
 }
 
-.logo {
+.logo{
     font-size: 2em;
     color: #fff;
     user-select: none;
     font-weight: 500;
+    
+    transition: .5s;
 }
+
 
 .logo a{
     text-decoration: none;
     color: white;
+    text-shadow: 2px 2px 4px #333;
+    
+    transition: all .5s;
+}
+
+.logo a:hover{
+    color:red;
 }
 
 .linkk{
@@ -75,7 +85,7 @@ header{
     transform: scaleX(1);
 }
 
-.linkk:hover{
+.linkk:hover{   
     color: white;
 }
 
@@ -127,3 +137,4 @@ header{
     background: #fff;
     color: #162938
 }
+

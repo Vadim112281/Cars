@@ -1,3 +1,7 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
 .contentik{
     display: flex;
     justify-content: space-between;
@@ -92,7 +96,7 @@
     border-radius: 6px;
     cursor: pointer;
     color: #fff;
-    font-weight: 500;
+    font-weight: 900;
     text-decoration: none;
     padding-right: 22px;
     padding-left: 26px;
@@ -100,7 +104,7 @@
     font-size: 26px;
     font-family: 'Roboto Slab', serif;
 
-    transition: .5s, color 0.3s, font-weight 0.3s; 
+    transition: all .5s;
    
 
 } 
@@ -119,17 +123,15 @@
     border-radius: 6px;
     cursor: pointer;
     color: #fff;
-    font-weight: 500;
+    font-weight: 900;
     text-decoration: none;
-    padding-right: 22px;
+    padding-right: 16px;
     padding-left: 26px;
     margin-left: -4px;
     font-size: 26px;
     font-family: 'Roboto Slab', serif;
 
     transition: .5s, color 0.3s, font-weight 0.3s;
-
-
 }
 
 .order__car-btn-1:hover{
@@ -142,23 +144,23 @@
 
 .btn-1{
     display: flex;
-    margin-top: 17px;
+    margin-top: 46px;
     backdrop-filter: blur(3px);
-    margin-left: 28px;
+    margin-left: 46px;
 }
 
 .btn-2{
     display: flex;
-    margin-top: 43px;
+    margin-top: 33px;
     backdrop-filter: blur(3px);
-    margin-left: 36px;
+    margin-left: 57px;
 }
 
 .btn-3{
     display: flex;
-    margin-top: 38px;
+    margin-top: 30px;
     backdrop-filter: blur(3px);
-    margin-left: 23px;
+    margin-left: 39px;
 }
 
 .order__back-2{
@@ -187,6 +189,14 @@
     background-size: cover;
     background-position: center;
     z-index: -1;
+}
+
+.order{
+    transition: .5s;
+}
+
+.order:hover{
+    transform: scale(120%);
 }
 
 

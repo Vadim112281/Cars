@@ -46,6 +46,13 @@ header{
 .logo a{
     color: white;
     text-decoration: none;
+    text-shadow: 2px 2px 4px #333;
+    
+    transition: all .5s;
+}
+
+.logo a:hover{
+    color:red;
 }
 
 .linkk{

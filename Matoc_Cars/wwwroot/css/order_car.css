@@ -1,0 +1,160 @@
+﻿*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.car__order{
+
+}
+
+.car__order-photo{
+    height: 550px;
+    width: 1280px;
+    border-radius: 15px;
+    border: 7px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 1px 1px 4px rgba(14, 14, 14, 0.4);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    
+   background-image: url("https://kalix.club/uploads/posts/2022-12/1671576663_kalix-club-p-oboi-na-telefon-mersedes-gelik-pinterest-3.jpg"); 
+}
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.car__order-content{
+    text-align: center;
+    display: block;
+    
+    backdrop-filter: blur(3px);
+}
+
+.car__order-title{
+    color: #fff;
+    font-size: 5em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px black,
+                0 0 20px black,
+                0 0 40px black,
+                0 0 80px black,
+                0 0 120px black;
+}
+
+.select-con{
+    display: flex;
+    justify-content: center ;
+}
+
+.select{
+    margin-top: 150px;
+    margin-bottom: 100px;
+
+    height: 70px;
+    width: 386px;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 10px;
+    color:white;
+    font-size: 30px;
+
+    transition: all .5s;
+}
+
+
+.select:hover{
+    height: 80px;
+    width: 400px;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    border: 3px solid black
+    
+    
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.select{
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    margin-left: 25px;
+    
+    transition: all .5s;
+}
+
+.select:hover{
+    transform: scale(110%);
+}
+
+
+
+
+
+.order__car-btn{
+    text-decoration: none;
+    background: none;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    min-width: 200px;
+    cursor: pointer;
+    font-weight: 900;
+    color: red;
+    border-radius: 10px;
+    font-size: 30px;
+    
+    transition: all 0.4s linear;
+    position: relative;
+    margin-left: 30px;
+    
+}
+
+.order__car-btn:hover{
+    color: white;
+    transform: scale(115%);
+}
+
+.order__car-btn:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: -1;
+    border-radius: 9px;
+    
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+
+.order__car-btn:before{
+    transform: scaleX(0);
+}
+
+.order__car-btn:before{
+    transform: scaleY(0);
+}
+
+.order__car-btn:hover::before{
+    transform: scaleX(1);
+}
+
+
+
+
+
+
+
