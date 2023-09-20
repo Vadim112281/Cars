@@ -47,7 +47,7 @@
           <div class="swiper-slide">
             <h2 class="slide-title">Рік автомобіля</h2>
             <select asp-for="YearOfCar" asp-items="Html.GetEnumSelectList<YearsOfCars>()"></select>
-            <button>Далі</button>
+            <button asp-controller="OrderCarPage2" asp-action="Index">Далі</button>
           </div>
     </div>
     <div class="swiper-button-next"></div>

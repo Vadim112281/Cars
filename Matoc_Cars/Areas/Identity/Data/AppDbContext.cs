@@ -1,4 +1,6 @@
 using Matoc_Cars.Areas.Identity.Data;
+using Matoc_Cars.Models;
+using Matoc_Cars.Models.Mercedes;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -12,11 +14,6 @@ public class AppDbContext : IdentityDbContext<AppUser>
     {
     }
 
-    protected override void OnModelCreating(ModelBuilder builder)
-    {
-        base.OnModelCreating(builder);
-        // Customize the ASP.NET Identity model and override the defaults if needed.
-        // For example, you can rename the ASP.NET Identity table names and more.
-        // Add your customizations after calling base.OnModelCreating(builder);
-    }
+    public DbSet<G_Class> G_Class { get; set; }
+    public DbSet<CarOrder> OrderedCars { get; set; }
 }

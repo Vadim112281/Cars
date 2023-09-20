@@ -1,0 +1,133 @@
+﻿*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.swiper {
+    width: 1300px;
+    height: 550px;
+}
+
+.swiper-slide {
+
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 550px;
+    width: 1280px;
+    border-radius: 15px;
+    border: 7px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 1px 1px 4px rgba(14, 14, 14, 0.4);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+
+    background-image: url("../css/Photo/gelik2.jpg");
+
+}
+
+.slide-title{
+    color: #fff;
+    font-size: 3em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px black,
+    0 0 20px black,
+    0 0 40px black,
+    0 0 80px black,
+    0 0 120px black;
+}
+
+
+
+.swiper-slide img {
+    display: block;
+    width: 238px;
+    height: 250px;
+    object-fit: cover;
+    margin-left: 62px;
+}
+
+
+
+
+
+.card {
+    background-color: transparent;
+    border-radius: 15px;
+    border: 7px solid white;
+    box-shadow: 1px 1px 4px rgba(14, 14, 14, 0.4);
+    width: 420px;
+    height: 400px;
+    text-align: center;
+    padding: 20px;
+    margin-left: 173px;
+    margin-top: 10px;
+    background-image: url("https://kalix.club/uploads/posts/2023-03/thumbs/1677778762_kalix-club-p-zastavka-znak-mersedesa-oboi-20.jpg"); 
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+
+
+}
+
+.card img {
+    max-width: 100%;
+
+    border-radius: 15px;
+    border: 7px solid white;
+    box-shadow: 1px 1px 4px rgba(14, 14, 14, 0.4);
+}
+
+.card h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-top: 2px;
+    font-weight: 900;
+    backdrop-filter: blur(3px);
+}
+
+.card p {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 900;
+    margin-top: 178px;  
+}
+
+.money{
+    color: #00FF00	;
+}
+
+.btn__more{
+    font-size: 16px;
+    background-color: #333; /* Цвет фона кнопки */
+    color: #fff; /* Цвет текста */
+    border: none;
+    border-radius: 5px; /* Скругление углов */
+    cursor: auto;
+    transition: all 0.3s ease; /* Плавное изменение цвета фона при наведении */
+    text-decoration: none;
+    
+    height: 40px;
+    width: 100px;
+    position: relative;
+    top: 348px;
+    right: 254px;
+    padding-top: 8px;
+}
+
+.btn__more:hover{
+    background-color: #555; /* Цвет фона при наведении курсора */
+    cursor: pointer;
+    color: white;
+    
+}
+
+.card__items{
+    display: flex;
+    justify-content: space-around;
+    margin-left: -79px;
+}
+

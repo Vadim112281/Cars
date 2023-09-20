@@ -5,45 +5,45 @@ namespace Matoc_Cars.Enum.Years;
 public enum YearsOfCars
 {
     [Display(Name = "2023")]
-    Twenty_three,
+    Twenty_three = 2023,
     [Display(Name = "2022")]
-    Twenty_two,
+    Twenty_two = 2022,
     [Display(Name = "2021")]
-    Twenty_one,
+    Twenty_one = 2021,
     [Display(Name = "2020")]
-    Twenty,
+    Twenty = 2020,
     [Display(Name = "2019")]
-    Nineteen,
+    Nineteen = 2019,
     [Display(Name = "2018")]
-    Eighteen,
+    Eighteen = 2018,
     [Display(Name = "2017")]
-    Seventeen,
+    Seventeen = 2017,
     [Display(Name = "2016")]
-    Sixteen,
+    Sixteen = 2016,
     [Display(Name = "2015")]
-    Fifteen,
+    Fifteen = 2015,
     [Display(Name = "2014")]
-    Fourteen,
+    Fourteen = 2014,
     [Display(Name = "2013")]
-    Thirteen,
+    Thirteen = 2013,
     [Display(Name = "2012")]
-    Twelve,
+    Twelve = 2012,
     [Display(Name = "2011")]
-    Eleven,
+    Eleven = 2011, 
     [Display(Name = "2010")]
-    Ten,
+    Ten = 2010,
     [Display(Name = "2009")]
-    Nine,
+    Nine = 2009,
     [Display(Name = "2008")]
-    Eight,
+    Eight = 2008,
     [Display(Name = "2007")]
-    Seven,
+    Seven = 2007,
     [Display(Name = "2006")]
-    Six,
+    Six = 2006,
     [Display(Name = "2005")]
-    Five,
+    Five = 2005,
     [Display(Name = "2004")]
-    Four,
+    Four= 2004,
     
 
 }

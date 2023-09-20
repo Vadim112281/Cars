@@ -1,0 +1,371 @@
+﻿@model Matoc_Cars.Models.Mercedes.G_Class;
+
+@{
+    ViewData["Title"] = "Детальніше про автомобіль";
+    
+}
+
+<style>
+    *{
+        margin-top: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background:url('https://img3.akspic.ru/crops/8/1/5/4/34518/34518-avtomobil-sportivnyj_avtomobil-mercedes_benz_sls_amg-mersedes_amg-mercedes_benz-1920x1080.jpg') no-repeat ;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        backdrop-filter: blur(3px);
+    
+    }
+    
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index:99;
+    
+    }
+    
+    .logo{
+        font-size: 2em;
+        color: #fff;
+        user-select: none;
+        font-weight: 500;
+    
+        transition: .5s;
+    }
+    
+    
+    .logo a{
+        text-decoration: none;
+        color: white;
+        text-shadow: 2px 2px 4px #333;
+    
+        transition: all .5s;
+    }
+    
+    .logo a:hover{
+        color:red;
+    }
+    
+    .linkk{
+        position: relative;
+        font-size: 1.1em;
+        color: #fff;
+        font-weight: 500;
+        margin-left: 40px;
+        transition: color 0.5s;
+        text-decoration: none  ;
+    }
+    
+    .linkk:after{
+        content: '';
+        position: absolute;
+        left:0;
+        bottom: -6px;
+        width: 100%;
+        height: 3px;
+        background: #fff;
+        border-radius: 5px;
+        transform-origin:right;
+        transform: scaleX(0);
+        transition: transform .5s;
+    
+    }
+    
+    .linkk:hover:after{
+        transform-origin:left;
+        transform: scaleX(1);
+    }
+    
+    .linkk:hover{
+        color: white;
+    }
+    
+    .btnLogin-popup{
+        display: inline-block;
+        text-align: center;
+    
+        width: 100px;
+        height: 30px;
+        background: transparent;
+        border: 2px solid #fff;
+        outline: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 1.1em;
+        color: #fff;
+        font-weight: 500;
+        margin-left: 40px;
+        text-decoration: none;
+        transition: .5s;
+    }
+    
+    .btnLogin-popup:hover{
+        background: #fff;
+        color: #162938;
+    }
+    
+    
+    .nav-item{
+        display: inline-block;
+        text-align: center;
+    
+        width: 100px;
+        height: 30px;
+        background: transparent;
+        border: 2px solid #fff;
+        outline: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 1.1em;
+        color: #fff;
+        font-weight: 500;
+        margin-left: 40px;
+        text-decoration: none;
+        transition: .5s;
+    }
+    
+    .nav-item:hover{
+        background: #fff;
+        color: #162938
+    }
+    
+    .content__detail{
+            width: 1300px;
+            height: 550px;
+            align-items: center;
+            border-radius: 15px;
+            border: 7px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 1px 1px 4px rgba(14, 14, 14, 0.4);
+            
+            margin-top: 50px;
+            margin-left: 17px;
+    }
+    
+    .detail__title{
+        color: white;
+        font-weight: 900;
+        margin-top: 24px;
+        margin-left: 18px;
+        font-size: 45px;
+        
+    }
+    
+    .swiper {
+        width: 684px;
+        height: 334px;
+        
+        right: 283px;
+        top: 20px;
+        
+    }
+    
+    .swiper-slide {
+    
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        height: 550px;
+        width: 1280px;
+        border-radius: 15px;
+        border: 7px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 1px 1px 4px rgba(14, 14, 14, 0.4);
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+    
+        background-image: url("../wwwroot/css/Photo/gelik2.jpg");
+    
+    }
+    
+/*    .swiper-slide img {
+        display: block;
+        width: 672px;
+        height: 323px;
+        object-fit: cover;
+        border-radius: 15px;
+    } */
+    
+    .detail__p{
+        font-size: 50px;
+        margin-top: 30px;
+        margin-left: 157px;
+        color: white;
+        font-weight: 900;    
+    }
+    
+    .order__price{
+        color: #00FF00;
+        margin-left: 16px;
+    }
+    
+    .detail__list{
+        margin-left: 703px;
+        margin-top: -372px;
+        list-style-type: none;
+    }
+    
+    .detail__list-item{
+        color:white;
+        font-size: 26px;
+        font-weight: 900;
+    }
+    
+    .detail__btn{
+      background-color: green; /* Колір фону */
+      border: none; /* Видаляємо рамку */
+      color: white; /* Колір тексту */
+      padding: 15px 90px; /* Внутрішні відступи */
+      text-align: center; /* Вирівнювання тексту по центру */
+      text-decoration: none; /* Видаляємо підкреслення тексту */
+      display: inline-block; /* Блоковий елемент, який може бути розміщений поруч */
+      font-size: 16px; /* Розмір шрифту */
+      margin: 10px 2px; /* Зовнішні відступи */
+      cursor: pointer; /* Змінюємо курсор при наведенні */
+      border-radius: 5px; /* Закруглені кути */
+      font-weight: 900;
+      transition: background-color 0.3s ease;
+    }
+    
+    .detail__btn:hover{
+       background-color: #45a049;
+       color: white;
+    }
+    
+    .btn__btn{
+        margin-left: 880px;
+        margin-top: -98px;
+    }
+    
+    .swiper__img{
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                z-index: -1 ;  
+                        display: block;
+                        width: 672px;
+                        height: 323px;
+                        object-fit: cover;
+                        border-radius: 15px;     
+    }
+    
+
+</style>
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap" rel="stylesheet">
+
+<header>
+    <h1 class="logo"><a asp-controller="Home" asp-action="Index">MatokCars</a></h1>
+    <nav class="navigation">
+        <a asp-controller="Home" asp-action="Index" class="linkk">Головна</a>
+        <a asp-controller="AboutUs" asp-action="Index" class="linkk">Про нас</a>
+        <a class="linkk" href="">Продати</a>
+        <a class="linkk" href="">В продажі</a>
+        <partial name="_LoginPartial"/>
+    </nav>
+</header>
+
+
+<div class="content__detail">
+    <style>
+            .content__detail
+            {
+                background-image: url("https://i.ibb.co/TtBG0g6/detail-logo-merc.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                z-index: -1;
+            }
+        </style>
+    <h2 class="detail__title">@Model.NameOfCar</h2>
+    
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+         
+            <div class="swiper-slide">
+                <img class="swiper__img" src="https://cdn.riastatic.com/photosnewr/auto/new_auto_storage/mercedes-benz-g-class__2107863-620x465x72.webp" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://cdn.riastatic.com/photosnewr/auto/new_auto_storage/mercedes-benz-g-class__2107860-620x465x72.webp" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://cdn.riastatic.com/photosnewr/auto/new_auto_storage/mercedes-benz-g-class__2107896-620x465x72.webp" alt="" class="swiper__img">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://cdn.riastatic.com/photosnewr/auto/new_auto_storage/mercedes-benz-g-class__2107894-620x465x72.webp" alt="" class="swiper__img">
+            </div>            
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    @if (@Model.Price == 241000)
+    {
+        <p class="detail__p">Ціна: <span class="order__price">241 000 $</span></p>
+    }
+    else if (@Model.Price == 181000)
+    {
+        <p class="detail__p">Ціна: <span class="order__price">181 000 $</span></p>
+    }
+    else if (@Model.Price == 150000)
+    {
+        <p class="detail__p">Ціна: <span class="order__price">150 000 $</span></p>
+    }    
+    
+    <ul class="detail__list">
+        <li class="detail__list-item">Двигун - @Model.Engine</li>
+        <li class="detail__list-item">Коробка передач - @Model.Transmission</li>
+        <li class="detail__list-item">Привід - @Model.DriveUnit</li>
+        <li class="detail__list-item">Покоління - @Model.Generation</li>
+        <li class="detail__list-item">Колір - @Model.Color</li>
+    </ul>
+</div>
+
+<div class="btn__btn">
+    <a href="#" class="detail__btn">Замовити</a>
+</div>
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      cssMode: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      mousewheel: true,
+      keyboard: true,
+    });
+  </script>

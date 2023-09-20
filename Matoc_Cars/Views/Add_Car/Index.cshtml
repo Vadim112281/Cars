@@ -1,0 +1,18 @@
+﻿@model Matoc_Cars.Models.Mercedes.G_Class  
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<form method="post">
+    <label >Price</label>
+    <input asp-for="Price">
+    <label >Name of Car</label>
+    <input asp-for="NameOfCar">
+    <label >Year of car </label>
+    <input asp-for="YearOfCar">
+    
+    <button asp-controller="Add_Car" asp-action="Index">Touch</button>
+</form>
+
