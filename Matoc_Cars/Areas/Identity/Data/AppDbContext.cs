@@ -16,4 +16,5 @@ public class AppDbContext : IdentityDbContext<AppUser>
 
     public DbSet<G_Class> G_Class { get; set; }
     public DbSet<CarOrder> OrderedCars { get; set; }
+    public DbSet<HaveCarForOrder> CarsForOrder { get; set; }
 }

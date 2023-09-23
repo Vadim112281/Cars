@@ -54,7 +54,7 @@
 
 
 
-.card {
+.card__cars {
     background-color: transparent;
     border-radius: 15px;
     border: 7px solid white;
@@ -68,12 +68,12 @@
     background-image: url("https://kalix.club/uploads/posts/2023-03/thumbs/1677778762_kalix-club-p-zastavka-znak-mersedesa-oboi-20.jpg"); 
     background-size: cover;
     background-position: center;
-    z-index: -1;
+   /* z-index: -1; */
 
 
 }
 
-.card img {
+.card__cars img {
     max-width: 100%;
 
     border-radius: 15px;
@@ -81,7 +81,7 @@
     box-shadow: 1px 1px 4px rgba(14, 14, 14, 0.4);
 }
 
-.card h2 {
+.card__cars h2 {
     color: #fff;
     font-size: 24px;
     margin-top: 2px;
@@ -89,7 +89,7 @@
     backdrop-filter: blur(3px);
 }
 
-.card p {
+.card__cars p {
     color: #fff;
     font-size: 25px;
     font-weight: 900;
@@ -106,16 +106,18 @@
     color: #fff; /* Цвет текста */
     border: none;
     border-radius: 5px; /* Скругление углов */
-    cursor: auto;
+    cursor: pointer;
     transition: all 0.3s ease; /* Плавное изменение цвета фона при наведении */
     text-decoration: none;
+    display: block;
     
     height: 40px;
     width: 100px;
     position: relative;
-    top: 348px;
-    right: 254px;
+    top: 9px;
+    right: -130px;
     padding-top: 8px;
+    text-align: center;
 }
 
 .btn__more:hover{
@@ -128,6 +130,8 @@
 .card__items{
     display: flex;
     justify-content: space-around;
-    margin-left: -79px;
+    margin-left: -166px;
 }
+
+
 

@@ -2,7 +2,7 @@
 @using Matoc_Cars.Enum.ModelOfCar
 @using Matoc_Cars.Enum.Years
 
-@model ModelYearCar
+@model HaveCarForOrder
 
 @{
     ViewData["Title"] = "Замовлення автомобіля";
@@ -41,7 +41,7 @@
             <h2 class="slide-title">Модель автомобіля</h2>
             @if (Static.namecar == "Mercedes")
             {
-              <select asp-for="ModelOfCar" asp-items="Html.GetEnumSelectList<Merсedes>()"></select>
+              <select asp-for="ShortName" asp-items="Html.GetEnumSelectList<Merсedes>()"></select>
             }
           </div>
           <div class="swiper-slide">

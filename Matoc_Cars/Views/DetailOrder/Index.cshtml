@@ -1,4 +1,4 @@
-﻿@model Matoc_Cars.Models.Mercedes.G_Class;
+﻿@model HaveCarForOrder
 
 @{
     ViewData["Title"] = "Детальніше про автомобіль";
@@ -302,7 +302,7 @@
                 z-index: -1;
             }
         </style>
-    <h2 class="detail__title">@Model.NameOfCar</h2>
+    <h2 class="detail__title">@Model.ModelOfCar</h2>
     
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
@@ -347,7 +347,7 @@
 </div>
 
 <div class="btn__btn">
-    <a href="#" class="detail__btn">Замовити</a>
+    <a class="detail__btn"  >Замовити</a>
 </div>
 
 
