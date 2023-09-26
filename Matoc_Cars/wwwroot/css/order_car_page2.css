@@ -49,4 +49,55 @@
     object-fit: cover;
 }
 
+.select__car{
+    margin-top: 114px;
+    margin-bottom: 100px;
+
+
+    
+    height: 95px;
+    width: 527px;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 12px;
+    color:white;
+    font-size: 30px;
+
+    transition: all .5s;
+}
+
+.select__car:hover{
+    height: 100px;
+    width: 550px;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    border: 3px solid black;
+    
+    transform: scale(115%);
+}
+
+/* Стилі для білої кнопки */
+.cool-button {
+    background-color: #ffffff; /* Білий фон */
+    color: #333; /* Колір тексту */
+    border: 2px solid #333; /* Товщина та колір межі */
+    padding: 15px 93px; /* Внутрішні відступи */
+    font-size: 16px; /* Розмір шрифту */
+    border-radius: 5px; /* Закруглені кути */
+    cursor: pointer; /* Змінює вигляд курсору при наведенні */
+    transition: background-color 0.3s, color 0.3s; /* Плавна анімація при наведенні */
+    display: flex;
+    margin-left: 540px;
+    margin-top: -41px;
+}
+
+/* Зміна стилю при наведенні */
+.cool-button:hover {
+    background-color: #333; /* Фон стає чорним */
+    color: #ffffff; /* Текст стає білим */
+}
+
+
+
 

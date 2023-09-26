@@ -1,4 +1,6 @@
-﻿using Matoc_Cars.Models;
+﻿using System.Collections;
+using System.Collections.Generic;
+using Matoc_Cars.Models;
 using Matoc_Cars.Services.ProcesOfOrder;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,7 +18,7 @@ public class OrderCarPageMerceGController : Controller
     // GET
     public IActionResult Index()
     {
-        IEnumerable<HaveCarForOrder> cars = _FindHaveService.FindCarByName(Static.modelcar, Static.yearcar);
+        var cars = _FindHaveService.FindCarByName(Static.modelcar, Static.yearcar);
 
         return View(cars);
     }

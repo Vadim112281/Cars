@@ -41,13 +41,13 @@
             <h2 class="slide-title">Модель автомобіля</h2>
             @if (Static.namecar == "Mercedes")
             {
-              <select asp-for="ShortName" asp-items="Html.GetEnumSelectList<Merсedes>()"></select>
+              <select class="select__car" asp-for="ShortName" asp-items="Html.GetEnumSelectList<Merсedes>()"></select>
             }
           </div>
           <div class="swiper-slide">
             <h2 class="slide-title">Рік автомобіля</h2>
-            <select asp-for="YearOfCar" asp-items="Html.GetEnumSelectList<YearsOfCars>()"></select>
-            <button asp-controller="OrderCarPage2" asp-action="Index">Далі</button>
+            <select class="select__car" asp-for="YearOfCar" asp-items="Html.GetEnumSelectList<YearsOfCars>()"></select>
+            <button class="cool-button" asp-controller="OrderCarPage2" asp-action="Index">Далі</button>
           </div>
     </div>
     <div class="swiper-button-next"></div>
