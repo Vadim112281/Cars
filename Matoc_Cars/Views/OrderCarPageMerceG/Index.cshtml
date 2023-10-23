@@ -35,17 +35,27 @@
             <div class="swiper-slide">
                 <h2 class="slide-title"> Виберіть авто</h2>
                 <div class="card__items">
-                        @foreach (var item in Model)
+                    
+                    @foreach (var item in Model)
+                    {
+                        //Зробитидля всіх 
+                        @if (Static.modelcar == "7" && Static.namecar == "Mercedes")
                         {
-                                <div class="card__cars">
-                                    <!--   <img src="css/Photo/gelick.jpg" alt="Изображение"> -->
-                                    <h2>@item.ModelOfCar</h2>
-                                    <p>Ціна:  <span class="money"> @item.Price $</span></p>
-                                    <a asp-controller="DetailOrder" asp-action="Index" asp-route-id="@item.Id" class="btn__more">Детальніше</a>
-                                </div>
- 
+                            <style>
+                                body{
+                                    background-image: url("https://kartinki.pics/pics/uploads/posts/2022-08/thumbs/1661275398_4-kartinkin-net-p-chernii-gelik-oboi-krasivo-4.jpg");
+                                }   
+                            </style>
                         }
-                    </div>
+                        <div class="card__cars">
+                            <!--   <img src="css/Photo/gelick.jpg" alt="Изображение"> -->
+                            <h2>@item.ModelOfCar</h2>
+                            <p>Ціна: <span class="money"> @item.Price $</span></p>
+                            <a asp-controller="DetailOrder" asp-action="Index" asp-route-id="@item.Id" class="btn__more">Детальніше</a>
+                        </div>
+
+                    }
+                </div>
                 
             </div>
             <div class="swiper-slide">

@@ -1,0 +1,77 @@
+﻿*{
+    font-family: 'Poppins', sans-serif;
+}
+.sell__form{
+    border-radius: 15px;
+    border: 7px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 1px 1px 4px rgba(14, 14, 14, 0.4);
+    height: 600px;
+    width: 1300px;
+    margin-top: 80px;
+   /* background-image: url("../css/Photo/lexus2.jpg"); */
+    background: transparent;
+    background-size: cover;
+    background-position: center;
+}
+
+.sell__title{
+    color: #fff;
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px black,
+    0 0 20px white,
+    0 0 40px black,
+    0 0 80px black,
+    0 0 120px black;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.select__car{
+    margin-top: 170px;
+    margin-bottom: 100px;
+    margin-left: 380px;
+    
+
+    height: 95px;
+    width: 527px;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 12px;
+    color:white;
+    font-size: 30px;
+
+    transition: all .5s;
+}
+
+.select__car:hover{
+    height: 100px;
+    width: 550px;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    border: 3px solid black;
+
+    transform: scale(115%);
+}
+
+.sell__btn-choose-car{
+    background-color: white;
+    color: #333; 
+    border: 2px solid #333; 
+    border-radius: 5px;
+    padding: 20px 80px; 
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    display: block;
+    margin-left: 540px;
+    margin-top: -20px;
+}
+
+.sell__btn-choose-car:hover{
+    background-color: #333; 
+    color: white; 
+    transform: scale(1.05); 
+}

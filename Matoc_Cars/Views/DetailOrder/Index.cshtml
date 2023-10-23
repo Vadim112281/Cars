@@ -192,8 +192,10 @@
         background-size: cover;
         background-position: center;
         z-index: -1;
+        
+        background:transparent;
     
-        background-image: url("../wwwroot/css/Photo/gelik2.jpg");
+       /* background-image: url("../wwwroot/css/Photo/gelik2.jpg"); */
     
     }
     
@@ -290,12 +292,21 @@
     </nav>
 </header>
 
+@if (Static.modelcar == "7" && Static.namecar == "Mercedes")
+{
+    <style>
+        body{
+           background-image: url("https://kartinki.pics/pics/uploads/posts/2022-08/thumbs/1661275398_4-kartinkin-net-p-chernii-gelik-oboi-krasivo-4.jpg");
+        }
+    </style>
+}
 
 <div class="content__detail">
     <style>
             .content__detail
             {
-                background-image: url("https://i.ibb.co/TtBG0g6/detail-logo-merc.jpg");
+               /* background-image: url("https://i.ibb.co/TtBG0g6/detail-logo-merc.jpg"); */
+                background: transparent;
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center;

@@ -1,0 +1,472 @@
+﻿*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.swiper {
+    width: 1300px;
+    height: 550px;
+    margin-top: 100px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 550px;
+    width: 1280px;
+    border-radius: 15px;
+    border: 7px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 1px 1px 4px rgba(14, 14, 14, 0.4);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    background: transparent;
+   /* background-image: url("../css/Photo/lexus2.jpg"); */
+
+}
+
+.slide-title{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px black,
+    0 0 20px white,
+    0 0 40px black,
+    0 0 80px black,
+    0 0 120px black;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.select_model{
+    margin-top: 15px;
+    margin-bottom: 100px;
+    margin-left: 128px;
+    height: 77px;
+    width: 287px;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 12px;
+    color:white;
+    font-size: 30px;
+
+    transition: all .5s;
+}
+
+.select_model:hover{
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    border: 3px solid white;
+}
+
+.select_year{
+    margin-top: 15px;
+    margin-bottom: 100px;
+    margin-left: 200px;
+    height: 77px;
+    width: 287px;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 12px;
+    color:white;
+    font-size: 30px;
+
+    transition: all .5s;
+}
+
+.select_year:hover{
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    border: 3px solid white;
+}
+
+.model_of_car{
+    color: white;
+    font-size: 25px;
+    margin-left: -763px;
+    margin-top: 208px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px black,
+    0 0 20px white,
+    0 0 40px black,
+    0 0 80px black,
+    0 0 120px black;
+}
+
+.year_of_car{
+    color: white;
+    font-size: 25px;
+
+    margin-top: 208px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px black,
+    0 0 20px white,
+    0 0 40px black,
+    0 0 80px black,
+    0 0 120px black;
+    margin-left: 84px;
+}
+
+.model{
+    display: grid;
+    margin-top: -86px;
+}
+
+.year{
+    display: grid;
+    margin-top: -438px;
+    margin-left: 695px;
+}
+
+.sell__btn-choose-car{
+    background-color: white;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 5px;
+    padding: 20px 123px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    display: block;
+    margin-left: 514px;
+    margin-top: -20px;
+}
+
+.sell__btn-choose-car:hover{
+    background-color: #333;
+    color: white;
+    transform: scale(1.05);
+}
+
+.select__engine{
+    margin-top: 15px;
+    margin-bottom: 100px;
+    margin-left: 128px;
+    height: 77px;
+    width: 287px;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 15px;
+    color:white;
+    font-size: 30px;
+
+    transition: all .5s;
+}
+
+.select__engine:hover{
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    border: 3px solid white;
+}
+
+.text__engine{
+    color: white;
+    font-size: 25px;
+
+    margin-top: 208px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px black,
+    0 0 20px white,
+    0 0 40px black,
+    0 0 80px black,
+    0 0 120px black;
+    margin-left: -796px;
+}
+
+.engine{
+    display: grid;
+    margin-top: -143px;
+    margin-left: -56px;
+}
+
+.select__transmission{
+    margin-top: 15px;
+    margin-bottom: 100px;
+    margin-left: 128px;
+    height: 77px;
+    width: 287px;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 15px;
+    color:white;
+    font-size: 30px;
+
+    transition: all .5s;
+}
+
+.select__transmission:hover{
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    border: 3px solid white;
+}
+
+.text__transmission{
+    color: white;
+    font-size: 25px;
+
+    margin-top: 208px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px black,
+    0 0 20px white,
+    0 0 40px black,
+    0 0 80px black,
+    0 0 120px black;
+    margin-left: 13px;
+}
+
+.transmission{
+    display: grid;
+    margin-top: -438px;
+    margin-left: 773px;
+}
+
+.text__color{
+    color: white;
+    font-size: 25px;
+
+    margin-top: 208px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px black,
+    0 0 20px white,
+    0 0 40px black,
+    0 0 80px black,
+    0 0 120px black;
+    margin-left: -796px;
+}
+
+.color{
+    display: grid;
+    margin-top: -238px;
+    margin-left: -56px;
+}
+
+.select__color{
+    margin-top: 15px;
+    margin-bottom: 100px;
+    margin-left: 128px;
+    height: 77px;
+    width: 287px;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 15px;
+    color:white;
+    font-size: 30px;
+
+    transition: all .5s;
+}
+
+.select__color:hover{
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    border: 3px solid white;
+}
+
+.drive__unit{
+    display: grid;
+    margin-top: -438px;
+    margin-left: 773px;
+}
+
+.text__drive-unit{
+    color: white;
+    font-size: 25px;
+
+    margin-top: 208px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px black,
+    0 0 20px white,
+    0 0 40px black,
+    0 0 80px black,
+    0 0 120px black;
+    margin-left: 32px;
+}
+
+.select__drive-unit{
+    margin-top: 15px;
+    margin-bottom: 100px;
+    margin-left: 128px;
+    height: 77px;
+    width: 287px;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 15px;
+    color:white;
+    font-size: 30px;
+
+    transition: all .5s;
+}
+
+.select__drive-unit:hover{
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    border: 3px solid white;
+}
+
+
+
+
+
+
+
+
+.sell__title-page-4{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px black,
+    0 0 20px white,
+    0 0 40px black,
+    0 0 80px black,
+    0 0 120px black;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.money{
+    color: #00FF00;
+}
+
+.text__price{
+    color: white;
+    font-size: 25px;
+
+    margin-top: 208px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px black,
+    0 0 20px white,
+    0 0 40px black,
+    0 0 80px black,
+    0 0 120px black;
+    margin-left: -808px;
+}
+
+.input__price{
+    width: 197px;
+    height: 35px;
+    background-color: transparent;
+    border:3px solid white;
+    border-radius: 10px;
+    margin-left: 159px;
+    color:white;
+    padding-left: 5px;
+}
+
+.input__price::placeholder{
+    padding-left: 5px;
+}
+
+.price{
+    display: grid;
+    margin-left: -33px;
+    margin-top: -127px;
+}
+
+.text__kilo{
+    color: white;
+    font-size: 25px;
+
+    margin-top: 208px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px black,
+    0 0 20px white,
+    0 0 40px black,
+    0 0 80px black,
+    0 0 120px black;
+    margin-left: -802px;
+}
+
+.input__kilo{
+    width: 197px;
+    height: 35px;
+    background-color: transparent;
+    border:3px solid white;
+    border-radius: 10px;
+    margin-left: 159px;
+    color:white;
+    padding-left: 5px;
+}
+
+.input__kilo::placeholder{
+    padding-left: 5px;
+}
+
+.kilometrs{
+    display: grid;
+    margin-left: -34px;
+    margin-top: -146px;
+}
+
+.description{
+    display: grid;
+    margin-top: -415px;
+    margin-left: 582px;
+}
+
+.text__description{
+    color: white;
+    font-size: 25px;
+
+    margin-top: 208px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px black,
+    0 0 20px white,
+    0 0 40px black,
+    0 0 80px black,
+    0 0 120px black;
+    margin-left: 142px;
+}
+
+.input__description{
+    width: 500px;
+    height: 171px;
+    background-color: transparent;
+    border:3px solid white;
+    border-radius: 10px;
+    margin-left: 159px;
+    color:white;
+    padding-left: 5px;
+}
+
+.input__description::placeholder{
+    padding-left: 5px;
+}
+
+.sell__btn-choose-car{
+    background-color: white;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 5px;
+    padding: 20px 123px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    display: block;
+    margin-left: 340px;
+    margin-top: 68px;
+}
+
+.sell__btn-choose-car:hover{
+    background-color: #333;
+    color: white;
+    transform: scale(1.05);
+}

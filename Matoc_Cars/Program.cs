@@ -2,8 +2,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Matoc_Cars.Areas.Identity.Data;
 using Matoc_Cars.Services;
+using Matoc_Cars.Services.CarOnSale;
 using Matoc_Cars.Services.OrderCar;
 using Matoc_Cars.Services.ProcesOfOrder;
+using Matoc_Cars.Services.SellCars;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,6 +24,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 });
 builder.Services.AddScoped<IFindHaveCar, FindHaveCar>();
 builder.Services.AddScoped<IOrderCar, OrderCar>();
+builder.Services.AddScoped<ISellCar, SellCar>();
+builder.Services.AddScoped<ICarSale, CarSale>();
 
 var app = builder.Build();
 

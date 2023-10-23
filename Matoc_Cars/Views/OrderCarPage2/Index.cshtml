@@ -41,6 +41,11 @@
             <h2 class="slide-title">Модель автомобіля</h2>
             @if (Static.namecar == "Mercedes")
             {
+              <style>
+                  body{
+                    background-image: url("https://phonoteka.org/uploads/posts/2023-03/1679968208_phonoteka-org-p-znak-mersedesa-oboi-pinterest-8.jpg");
+                  }
+              </style>
               <select class="select__car" asp-for="ShortName" asp-items="Html.GetEnumSelectList<Merсedes>()"></select>
             }
           </div>

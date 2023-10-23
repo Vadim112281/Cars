@@ -15,8 +15,9 @@
     background-size: cover;
     background-position: center;
     z-index: -1;
+    background: transparent;
     
-   background-image: url("https://kalix.club/uploads/posts/2022-12/1671576663_kalix-club-p-oboi-na-telefon-mersedes-gelik-pinterest-3.jpg"); 
+  /* background-image: url("https://kalix.club/uploads/posts/2022-12/1671576663_kalix-club-p-oboi-na-telefon-mersedes-gelik-pinterest-3.jpg"); */
 }
 
 

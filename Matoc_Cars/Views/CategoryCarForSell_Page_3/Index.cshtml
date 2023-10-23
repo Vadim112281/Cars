@@ -1,0 +1,102 @@
+﻿@using Matoc_Cars.Models.CarSale
+@model IEnumerable<Matoc_Cars.Models.SellCar.SellCarModel>
+
+@{
+    ViewData["Title"] = "Пошук машини";
+}
+
+<link rel="stylesheet" href="css/header.css" asp-append-version="true">
+<link rel="stylesheet" href="css/car_for_sell.css" asp-append-version="true">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap" rel="stylesheet">
+
+<header>
+    <h1 class="logo"><a asp-controller="Home" asp-action="Index">MatokCars</a></h1>
+    <nav class="navigation">
+        <a asp-controller="Home" asp-action="Index" class="linkk">Головна</a>
+        <a asp-controller="AboutUs" asp-action="Index" class="linkk">Про нас</a>
+        <a class="linkk" href="">Замовити</a>
+        <a class="linkk" href="">Продати</a>
+        <partial name="_LoginPartial"/>
+    </nav>
+</header>
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+<!-- Swiper -->
+<form method="post">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                @foreach (var item in Model)
+                {
+                    @if (item.NameOfCar == 0 && SaledCarStatic.ModelOfCar == "7")
+                    {
+                        <style>
+                            body{
+                                background-image: url("https://foni.club/uploads/posts/2023-01/thumbs/1673490070_foni-club-p-krutie-oboi-gelika-2.jpg");
+                            }
+                        </style>
+                        <div class="card__card-category">
+                            <div class="card__items-merc-category">
+                                <!--   <img src="css/Photo/gelick.jpg" alt="Изображение"> --><style>
+                                    .card__items-merc-category{
+                                        background-color: transparent;
+                                        border-radius: 15px;
+                                        border: 7px solid white;
+                                        box-shadow: 1px 1px 4px rgba(14, 14, 14, 0.4);
+                                        width: 420px;
+                                        height: 400px;
+                                        text-align: center;
+                                        padding: 20px;
+                                        margin-left: 66px;
+                                        margin-top: 62px;
+                                        background-size: cover;
+                                        background-position: center;
+                                        
+                                        background-image: url("https://kalix.club/uploads/posts/2023-03/thumbs/1677778762_kalix-club-p-zastavka-znak-mersedesa-oboi-20.jpg");
+                                    }
+                                    body{
+                                    /* Тут можна прям заморочитися і зробити типу якщо гелік, то фон геліка */
+                                        background-image: url('https://kalix.club/uploads/posts/2022-12/1671585614_kalix-club-p-oboi-chernii-mersedes-krasivo-1.jpg');
+                                        background-repeat: no-repeat;
+                                    }
+                                </style>
+                                <h2 class="model__car">Mercedes-Benz G-Class</h2>
+                            
+                                <p class="price__car">Ціна: <span class="dolar">@item.Price $</span></p>
+                                <a asp-controller="DetailOrder" asp-action="Index" asp-route-id="" class="btn__more">Детальніше</a>
+                            </div>                
+                        </div>          
+                    }
+                }
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+</form>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      cssMode: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      mousewheel: true,
+      keyboard: true,
+    });
+    
+</script>
