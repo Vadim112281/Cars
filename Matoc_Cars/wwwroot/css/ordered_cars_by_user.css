@@ -1,0 +1,79 @@
+﻿body{
+    background: url("https://st4.depositphotos.com/21923188/23484/i/450/depositphotos_234848232-stock-photo-black-generic-luxury-car-3d.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.ordered__cars-container{
+    height: 570px;
+    width: 1280px;
+    margin-top:40px;
+    border-radius: 15px;
+    border: 7px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 1px 1px 4px rgba(14, 14, 14, 0.4);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    background: transparent;
+}
+
+ /*.card__card{
+    background-color: transparent;
+    border-radius: 15px;
+    border: 7px solid white;
+    box-shadow: 1px 1px 4px rgba(14, 14, 14, 0.4);
+    width: 420px;
+    height: 400px;
+    text-align: center;
+    padding: 20px;
+    margin-left: 130px;
+    margin-top: 70px;
+    background-size: cover;
+    background-position: center;
+}*/
+
+.card__card{
+    display: flex;
+}
+
+.name__g{
+    margin-top: 70px;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px black,
+    0 0 20px black,
+    0 0 40px black,
+    0 0 80px black,
+    0 0 120px black;
+}
+
+.dol{
+    color: #00FF00;
+}
+
+.name__price{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px black,
+    0 0 20px black,
+    0 0 40px black,
+    0 0 80px black,
+    0 0 120px black;
+}
+
+.name__year{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px black,
+    0 0 20px black,
+    0 0 40px black,
+    0 0 80px black,
+    0 0 120px black;
+}

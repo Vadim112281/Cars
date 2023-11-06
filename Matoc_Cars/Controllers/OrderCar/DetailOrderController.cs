@@ -36,7 +36,9 @@ public class DetailOrderController : Controller
             ModelOfCar = car.ModelOfCar,
             YearOfCar = car.YearOfCar,
             Color = car.Color,
-            Price = car.Price
+            Price = car.Price,
+            User = User.Identity.Name,
+            ShortModelOfCar = car.ShortNameOfCar
         };
 
         _OrderService.OrderedCar(OrderedCar);

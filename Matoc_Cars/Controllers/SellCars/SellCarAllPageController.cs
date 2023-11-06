@@ -33,7 +33,8 @@ public class SellCarAllPageController : Controller
             DriveUnit = model.DriveUnit,
             Price = model.Price,
             Description = model.Description,
-            Mileage = model.Mileage
+            Mileage = model.Mileage,
+            User = User.Identity.Name
         };
 
         _SellService.Add(SellCar);

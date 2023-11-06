@@ -4,6 +4,7 @@ using Matoc_Cars.Areas.Identity.Data;
 using Matoc_Cars.Services;
 using Matoc_Cars.Services.CarOnSale;
 using Matoc_Cars.Services.OrderCar;
+using Matoc_Cars.Services.OrderedCarByUser;
 using Matoc_Cars.Services.ProcesOfOrder;
 using Matoc_Cars.Services.SellCars;
 using Microsoft.AspNetCore.Builder;
@@ -26,6 +27,7 @@ builder.Services.AddScoped<IFindHaveCar, FindHaveCar>();
 builder.Services.AddScoped<IOrderCar, OrderCar>();
 builder.Services.AddScoped<ISellCar, SellCar>();
 builder.Services.AddScoped<ICarSale, CarSale>();
+builder.Services.AddScoped<IOrderedByUser, OrderedByUser>();
 
 var app = builder.Build();
 

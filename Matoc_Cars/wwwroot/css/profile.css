@@ -1,0 +1,123 @@
+﻿.profile__form{
+    border-radius: 15px;
+    border: 7px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 1px 1px 4px rgba(14, 14, 14, 0.4);
+    height: 600px;
+    width: 1000px;
+    margin-top: 80px;
+    margin-left:160px;
+    /*background-image: url("../css/Photo/lexus2.jpg"); */
+    background: transparent;
+    background-size: cover;
+    background-position: center;
+}
+
+.profile__title{
+    color: #fff;
+    font-sizse: 50px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px black,
+    0 0 20px white,
+    0 0 40px black,
+    0 0 80px black,
+    0 0 120px black;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.profile__form{
+    display: grid;
+}
+
+.profile__emails{
+    margin-top:79px;
+    margin-left:-155px;
+}
+
+.profile__email-name{
+    color: #fff;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px black,
+    0 0 20px white,
+    0 0 40px black,
+    0 0 80px black,
+    0 0 120px black;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 10px ;
+    width: 195px;
+    height: 47px;
+    
+    margin-top:-287px;
+    margin-right:226px;
+    float: right    ;
+}
+
+.profile__email-email{
+    color: #fff;
+    font-sizse: 30px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px black,
+    0 0 20px white,
+    0 0 40px black,
+    0 0 80px black,
+    0 0 120px black;
+    text-align: center;
+    
+    margin-top: -223px;
+    margin-left: 491px;
+}
+
+.profile__image{
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    border-radius: 20px;
+    
+    margin-top: -23px;
+    margin-left: 211px;
+    
+    background: url("https://pushinka.top/uploads/posts/2023-03/1679880645_pushinka-top-p-avatarka-cheloveka-bez-litsa-instagram-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profile__btns{
+    display: flex;
+    margin-top: -100px;
+}
+
+
+
+.btn__ordered-cars{
+    font-size: 20px;
+    background-color: #333; /* Цвет фона кнопки */
+    color: #fff; /* Цвет текста */
+    border: none;
+    border-radius: 5px; /* Скругление углов */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Плавное изменение цвета фона при наведении */
+    text-decoration: none;
+    display: block;
+    margin-left:270px;
+
+    height: 61px;
+    width: 203px;
+    position: relative;
+    top: 9px;
+    right: -130px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.btn__ordered-cars:hover{
+    background-color: #555; /* Цвет фона при наведении курсора */
+    cursor: pointer;
+    color: white;
+}
+
+

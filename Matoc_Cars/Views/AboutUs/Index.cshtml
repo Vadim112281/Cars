@@ -15,8 +15,9 @@
     <h2 class="logo"><a asp-controller="Home" asp-action="Index">MatokCars</a></h2>
     <nav class="navigation">
         <a class="linkk" asp-controller="Home" asp-action="Index">Головна</a>
-        <a class="linkk" href="">Шось</a>
-        <a class="linkk" href="">Шось2</a>
+       <a asp-controller="OrderCar" asp-action="Index" class="linkk" >Замовити</a>
+        <a asp-controller="SellCar" asp-action="Index" class="linkk" >Продати</a>
+         <a asp-controller="CarForSell" asp-action="Index" class="linkk" >В продажі</a>
         <partial name="_LoginPartial"/>
     </nav>
 </header>

@@ -75,3 +75,15 @@
     color: white; 
     transform: scale(1.05); 
 }
+
+.car__order-error{
+    color: white;
+    margin-top:100px;
+    font-size: 40px;
+    font-weight: 900;
+    margin-left: 80px;
+}
+
+.register-link{
+    margin-left:430px;
+}

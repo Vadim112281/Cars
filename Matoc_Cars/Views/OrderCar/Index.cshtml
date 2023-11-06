@@ -22,8 +22,8 @@
       <nav class="navigation">
           <a asp-controller="Home" asp-action="Index" class="linkk">Головна</a>
           <a asp-controller="AboutUs" asp-action="Index" class="linkk">Про нас</a>
-          <a class="linkk" href="">Продати</a>
-          <a class="linkk" href="">В продажі</a>
+           <a asp-controller="SellCar" asp-action="Index" class="linkk" >Продати</a>
+          <a asp-controller="CarForSell" asp-action="Index" class="linkk" >В продажі</a>
           <partial name="_LoginPartial"/>
       </nav>
   </header>
@@ -31,11 +31,26 @@
 <form method="post">
     <div class="car__order-photo">
         <div class="car__order-content">
-            <h2 class="car__order-title">Марка автомобіля</h2>
-            <div class="select-con">
-                <select asp-for="NameOfCar" class="select" asp-items="Html.GetEnumSelectList<NameOfCars>()"></select>
-            </div>
-            <button asp-controller="OrderCar" asp-action="Index" class="order__car-btn">Обрати автомобіль</button>
+            @if (!User.Identity.IsAuthenticated)
+            {   
+                <style>
+                    body{
+                        background: url("https://i.pinimg.com/originals/bb/71/c4/bb71c409c2c1123cab54eef63cc05fc2.jpg");
+                        background-size: cover;
+                    }
+                </style>
+                <h2 class="car__order-title">Помилка</h2>
+                <h3 class="car__order-error">Ви не увійшли в акаунт. Увійдіть в акаунт, якщо вже зареєстровані. Якщо не маєте акаунту, то пройдіть <a asp-area="Identity" asp-page="/Account/Register" class="register-link" >реєстрацію</a>.</h3>
+            }
+            else
+            {
+                <h2 class="car__order-title">Марка автомобіля</h2>
+                <div class="select-con">
+                    <select asp-for="NameOfCar" class="select" asp-items="Html.GetEnumSelectList<NameOfCars>()"></select>
+                </div>
+                <button asp-controller="OrderCar" asp-action="Index" class="order__car-btn">Обрати автомобіль</button>                
+            }
+
         </div>
     </div>
 </form>

@@ -1,0 +1,294 @@
+﻿@using Microsoft.EntityFrameworkCore.Infrastructure
+@using Matoc_Cars.Enum
+@model Matoc_Cars.Models.SellCar.SellCarModel
+
+
+@{
+    ViewData["Title"] = "Детальніше про автомобіль";
+}
+
+<style>
+    *{
+        margin-top: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-image: url("https://sportishka.com/uploads/posts/2021-12/1639170856_1-sportishka-com-p-mashina-na-chernom-fone-sport-krasivo-foto-1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        backdrop-filter: blur(3px);
+    
+    }
+    
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index:99;
+    
+    }
+    
+    .logo{
+        font-size: 2em;
+        color: #fff;
+        user-select: none;
+        font-weight: 500;
+    
+        transition: .5s;
+    }
+    
+    
+    .logo a{
+        text-decoration: none;
+        color: white;
+        text-shadow: 2px 2px 4px #333;
+    
+        transition: all .5s;
+    }
+    
+    .logo a:hover{
+        color:red;
+    }
+    
+    .linkk{
+        position: relative;
+        font-size: 1.1em;
+        color: #fff;
+        font-weight: 500;
+        margin-left: 40px;
+        transition: color 0.5s;
+        text-decoration: none  ;
+    }
+    
+    .linkk:after{
+        content: '';
+        position: absolute;
+        left:0;
+        bottom: -6px;
+        width: 100%;
+        height: 3px;
+        background: #fff;
+        border-radius: 5px;
+        transform-origin:right;
+        transform: scaleX(0);
+        transition: transform .5s;
+    
+    }
+    
+    .linkk:hover:after{
+        transform-origin:left;
+        transform: scaleX(1);
+    }
+    
+    .linkk:hover{
+        color: white;
+    }
+    
+    .btnLogin-popup{
+        display: inline-block;
+        text-align: center;
+    
+        width: 100px;
+        height: 30px;
+        background: transparent;
+        border: 2px solid #fff;
+        outline: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 1.1em;
+        color: #fff;
+        font-weight: 500;
+        margin-left: 40px;
+        text-decoration: none;
+        transition: .5s;
+    }
+    
+    .btnLogin-popup:hover{
+        background: #fff;
+        color: #162938;
+    }
+    
+    
+    .nav-item{
+        display: inline-block;
+        text-align: center;
+    
+        width: 100px;
+        height: 30px;
+        background: transparent;
+        border: 2px solid #fff;
+        outline: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 1.1em;
+        color: #fff;
+        font-weight: 500;
+        margin-left: 40px;
+        text-decoration: none;
+        transition: .5s;
+    }
+    
+    .nav-item:hover{
+        background: #fff;
+        color: #162938
+    }
+    
+    .sell__title{
+        color: #fff;
+        font-sizse: 50px;
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        text-shadow: 0 0 10px black,
+        0 0 20px white,
+        0 0 40px black,
+        0 0 80px black,
+        0 0 120px black;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .sell__form{
+        border-radius: 15px;
+        border: 7px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 1px 1px 4px rgba(14, 14, 14, 0.4);
+        height: 600px;
+        width: 1300px;
+        margin-top: 80px;
+         /*background-image: url("../css/Photo/lexus2.jpg"); */
+        background: transparent;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .sell__photo{
+        border: 2px solid white;
+        width: 450px;
+        height: 300px;
+        background: transparent;   
+        border-radius: 10px;
+        margin-left:100px;
+        margin-top: 50px;
+    }
+    
+    .sell__price-text{
+        color: white;
+        font-size: 40px;
+    }
+    
+    .price__dollar{
+        color: #00FF00;
+        font-size: 40px;
+    }
+    
+    .sell__price-text{
+        margin-left:  220px;
+        margin-top: 3px;
+        font-weight: 900;
+    }
+    
+    .detail__list{
+        margin-left: 684px;
+        margin-top: -350px;
+        list-style-type: none;
+    }
+    
+    .detail__list-item{
+        color: white;
+        font-size: 35px;
+        font-weight: 900;
+    }
+    
+    .sell__user-text{
+        color: white;
+        font-size: 32px;
+        font-weight: 900;
+        margin-top: 69px;
+        margin-left: 634px;
+    }
+
+</style>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap" rel="stylesheet">
+
+<header>
+    <h1 class="logo"><a asp-controller="Home" asp-action="Index">MatokCars</a></h1>
+    <nav class="navigation">
+        <a asp-controller="Home" asp-action="Index" class="linkk">Головна</a>
+        <a asp-controller="AboutUs" asp-action="Index" class="linkk">Про нас</a>
+        <a class="linkk" href="">Замовити</a>
+        <a class="linkk" href="">Продати</a>
+        <partial name="_LoginPartial"/>
+    </nav>
+</header>
+
+
+<div class="sell__form">
+    @if (Model.NameOfCar == 0 && Model.ModelOfCar == "7")
+    {
+        <style>
+            body{
+                background: url("https://abrakadabra.fun/uploads/posts/2022-01/1641248038_10-abrakadabra-fun-p-znachok-mersedes-oboi-na-android-10.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        </style>
+        <h2 class="sell__title">Mersedes G-Class</h2>
+        <div class="container__sell">
+            <div class="sell__photo"><!--Make with JS slider--></div>
+            <div class="sell__price">
+                @if (@Model.Price == 240000)
+                {
+                    <p class="sell__price-text">240 000 <span class="price__dollar"> $</span></p>
+                }
+                
+            </div>
+            <div class="sell__list">
+                <ul class="detail__list">
+                    @if (Model.Engine == Engine.two_disel)
+                    {
+                        <li class="detail__list-item">Двигун - 2л | Дізель</li>
+                    }
+                    
+                    @if (Model.Transmission == Transmission.avtomat)
+                    {
+                        <li class="detail__list-item">Коробка передач - Автомат</li>
+                    }
+                    
+                    @if (Model.DriveUnit == DriveUnit.full)
+                    {
+                        <li class="detail__list-item">Привід - Повний</li>
+                    }
+                    
+                    @if (Model.Color == Color.Black)
+                    {
+                        <li class="detail__list-item">Колір - Чорний</li>
+                    }
+                    
+                </ul>
+            </div>
+            <div class="sell__user">
+                <p class="sell__user-text">Власник - @Model.User</p>
+            </div>
+        </div>
+        
+    }
+</div>

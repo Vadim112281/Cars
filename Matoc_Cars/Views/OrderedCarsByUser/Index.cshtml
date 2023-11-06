@@ -1,0 +1,70 @@
+﻿@using Matoc_Cars.Enum
+@using Matoc_Cars.Enum.ModelOfCar
+@model IEnumerable<CarOrder>
+
+
+@{
+    ViewData["Title"] = "Замовленні автомобілі";
+}
+
+
+<!--Styles-->
+<link rel="stylesheet" href="css/header.css" asp-append-version="true">
+<link rel="stylesheet" href="css/ordered_cars_by_user.css" asp-append-version="true" >
+
+<link rel="website icon" type="jpg" href="css/Photo/logo.jpg"> 
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap" rel="stylesheet">
+    
+<header>
+    <h1 class="logo"><a asp-controller="Home" asp-action="Index">MatokCars</a></h1>
+    <nav class="navigation">
+        <a asp-controller="Home" asp-action="Index" class="linkk">Головна</a>
+        <a asp-controller="AboutUs" asp-action="Index" class="linkk">Про нас</a>
+        <a asp-controller="OrderCar" asp-action="Index" class="linkk" >Замовити</a>
+        <a asp-controller="SellCar" asp-action="Index" class="linkk" >Продати</a>
+        <a asp-controller="CarForSell" asp-action="Index" class="linkk" >В продажі</a>
+        <partial name="_LoginPartial"/>
+    </nav>
+</header>
+
+
+<div class="ordered__cars-container">
+    <div class="card__card">
+        @foreach (var item in Model)
+        {
+            if (item.NameOfCar == NameOfCars.Mercedes.ToString() && item.ShortModelOfCar == "G")
+            {
+                <div class="card__card-mers">
+                    <style>
+                        .card__card-mers{
+                            background: url("https://c4.wallpaperflare.com/wallpaper/575/282/487/mercedes-benz-logo-wallpaper-preview.jpg");
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-position: center;
+                            
+                             border-radius: 15px;
+                            border: 7px solid white;
+                            box-shadow: 1px 1px 4px rgba(14, 14, 14, 0.4);
+                            width: 420px;
+                            height: 400px;
+                            text-align: center;
+                            margin-left: 130px;
+                            margin-top: 70px;
+                            
+                        }
+                    </style>
+                    <p class="name__g">@item.ModelOfCar</p>  
+                    <p class="name__year">@item.YearOfCar</p>
+                    <p class="name__price">@item.Price <span class="dol">$</span></p>  
+                </div>
+
+                <!--Зробити для того, у кого нема ще замовлених машин-->
+            }
+        }
+    </div>
+</div>
+

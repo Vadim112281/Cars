@@ -32,48 +32,50 @@
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                @foreach (var item in Model)
-                {
-                    @if (item.NameOfCar == 0 && SaledCarStatic.ModelOfCar == "7")
-                    {
-                        <style>
-                            body{
-                                background-image: url("https://foni.club/uploads/posts/2023-01/thumbs/1673490070_foni-club-p-krutie-oboi-gelika-2.jpg");
-                            }
-                        </style>
-                        <div class="card__card-category">
-                            <div class="card__items-merc-category">
-                                <!--   <img src="css/Photo/gelick.jpg" alt="Изображение"> --><style>
-                                    .card__items-merc-category{
-                                        background-color: transparent;
-                                        border-radius: 15px;
-                                        border: 7px solid white;
-                                        box-shadow: 1px 1px 4px rgba(14, 14, 14, 0.4);
-                                        width: 420px;
-                                        height: 400px;
-                                        text-align: center;
-                                        padding: 20px;
-                                        margin-left: 66px;
-                                        margin-top: 62px;
-                                        background-size: cover;
-                                        background-position: center;
-                                        
-                                        background-image: url("https://kalix.club/uploads/posts/2023-03/thumbs/1677778762_kalix-club-p-zastavka-znak-mersedesa-oboi-20.jpg");
-                                    }
+                <div class="category__container">
+                        @foreach (var item in Model)
+                        {
+                            @if (item.NameOfCar == 0 && SaledCarStatic.ModelOfCar == "7")
+                            {
+                                <style>
                                     body{
-                                    /* Тут можна прям заморочитися і зробити типу якщо гелік, то фон геліка */
-                                        background-image: url('https://kalix.club/uploads/posts/2022-12/1671585614_kalix-club-p-oboi-chernii-mersedes-krasivo-1.jpg');
-                                        background-repeat: no-repeat;
+                                        background-image: url("https://foni.club/uploads/posts/2023-01/thumbs/1673490070_foni-club-p-krutie-oboi-gelika-2.jpg");
                                     }
                                 </style>
-                                <h2 class="model__car">Mercedes-Benz G-Class</h2>
-                            
-                                <p class="price__car">Ціна: <span class="dolar">@item.Price $</span></p>
-                                <a asp-controller="DetailOrder" asp-action="Index" asp-route-id="" class="btn__more">Детальніше</a>
-                            </div>                
-                        </div>          
-                    }
-                }
+                                <div class="card__card-category">
+                                    <div class="card__items-merc-category">
+                                        <!--   <img src="css/Photo/gelick.jpg" alt="Изображение"> --><style>
+                                            .card__items-merc-category{
+                                                background-color: transparent;
+                                                border-radius: 15px;
+                                                border: 7px solid white;
+                                                box-shadow: 1px 1px 4px rgba(14, 14, 14, 0.4);
+                                                width: 420px;
+                                                height: 400px;
+                                                text-align: center;
+                                                padding: 20px;
+                                                margin-left: 66px;
+                                                margin-top: 62px;
+                                                background-size: cover;
+                                                background-position: center;
+                                                
+                                                background-image: url("https://kalix.club/uploads/posts/2023-03/thumbs/1677778762_kalix-club-p-zastavka-znak-mersedesa-oboi-20.jpg");
+                                            }
+                                            body{
+                                            /* Тут можна прям заморочитися і зробити типу якщо гелік, то фон геліка */
+                                                background-image: url('https://kalix.club/uploads/posts/2022-12/1671585614_kalix-club-p-oboi-chernii-mersedes-krasivo-1.jpg');
+                                                background-repeat: no-repeat;
+                                            }
+                                        </style>
+                                        <h2 class="model__car">Mercedes-Benz G-Class</h2>
+
+                                        <p class="price__car">Ціна: <span class="dolar">@item.Price $</span></p>
+                                        <a asp-controller="ForSaleDetail" asp-action="Index" asp-route-id="@item.Id" class="btn__more">Детальніше</a>
+                                    </div>
+                                </div>
+                            }
+                        }
+                </div>
             </div>
         </div>
         <div class="swiper-button-next"></div>

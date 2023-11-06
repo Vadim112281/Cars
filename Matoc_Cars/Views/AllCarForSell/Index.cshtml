@@ -24,42 +24,43 @@
     </nav>
 </header>
 
-<section class="sell">
-    <form method="post">
-        <div class="sell__form">
-            <h2 class="sell__title">Автомобілі в продажі</h2>
-            @foreach (var item in Model)
-            {
-                @if (item.NameOfCar == 0 && item.ModelOfCar == "7")
-                {
-                    <div class="card__card">
-                        <div class="card__items-merc">
-                            <!--   <img src="css/Photo/gelick.jpg" alt="Изображение"> --><style>
-                                    .card__items-merc{
-                                        background-color: transparent;
-                                        border-radius: 15px;
-                                        border: 7px solid white;
-                                        box-shadow: 1px 1px 4px rgba(14, 14, 14, 0.4);
-                                        width: 420px;
-                                        height: 400px;
-                                        text-align: center;
-                                        padding: 20px;
-                                        margin-left: 173px;
-                                        margin-top: 10px;
-                                        background-size: cover;
-                                        background-position: center;
-                                        
-                                        background-image: url("https://kalix.club/uploads/posts/2023-03/thumbs/1677778762_kalix-club-p-zastavka-znak-mersedesa-oboi-20.jpg");
-                                    }
-                                </style>
-                                <h2 class="model__car">Mercedes-Benz G-Class</h2>
-                            
-                            <p class="price__car">Ціна: <span class="dolar">@item.Price $</span></p>
-                            <a asp-controller="DetailOrder" asp-action="Index" asp-route-id="" class="btn__more">Детальніше</a>
-                        </div>                
-                    </div>          
-                }
-            }
-        </div>        
-    </form>
-</section>
+       <div class="sell__form">
+               <h2 class="sell__title">Автомобілі в продажі</h2>
+               <div class="container__sell">
+                   @foreach (var item in Model)
+                   {
+                       <form method="post">
+                            @if (item.NameOfCar == 0 && item.ModelOfCar == "7")
+                           {
+                                <div class="card__card">
+                                   <div class="card__items-merc">
+                                        <style>
+                                            .card__items-merc{
+                                                background-color: transparent;
+                                                border-radius: 15px;
+                                                border: 7px solid white;
+                                                box-shadow: 1px 1px 4px rgba(14, 14, 14, 0.4);
+                                                width: 420px;
+                                                height: 400px;
+                                                text-align: center;
+                                                padding: 20px;
+                                                margin-left: 173px;
+                                                margin-top: 10px;
+                                                background-size: cover;
+                                                background-position: center;
+                                                
+                                                background-image: url("https://kalix.club/uploads/posts/2023-03/thumbs/1677778762_kalix-club-p-zastavka-znak-mersedesa-oboi-20.jpg");
+                                            }
+                                        </style>                                            
+                                       <h2 class="model__car">Mercedes-Benz G-Class</h2>
+                                                   
+                                       <p class="price__car">Ціна: <span class="dolar">@item.Price $</span></p>
+                                       <button class="btn__more" asp-controller="ForSaleDetail" asp-action="Index" asp-route-id="@item.Id">Детальніше</button>
+                                   </div>                
+                               </div>
+                           }
+                       </form>
+                   }
+               </div>
+           </div>
+

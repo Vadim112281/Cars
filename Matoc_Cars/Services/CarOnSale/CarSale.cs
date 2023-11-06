@@ -1,6 +1,7 @@
 ﻿using Matoc_Cars.Areas.Identity.Data;
 using Matoc_Cars.Models.CarSale;
 using Matoc_Cars.Models.SellCar;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 
 namespace Matoc_Cars.Services.CarOnSale;
@@ -27,5 +28,13 @@ public class CarSale: ICarSale
             && x.Price >= model.PriceFrom).ToList();
 
         return CarForSale;
+    }
+
+    public  SellCarModel GetCarById(int id)
+    {
+        var car =  _context.SellCars.FirstOrDefault(x => x.Id == id);
+        
+        return car;
+
     }
 }

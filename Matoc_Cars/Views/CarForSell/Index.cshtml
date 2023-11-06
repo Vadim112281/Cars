@@ -16,8 +16,8 @@
     <nav class="navigation">
         <a asp-controller="Home" asp-action="Index" class="linkk">Головна</a>
         <a asp-controller="AboutUs" asp-action="Index" class="linkk">Про нас</a>
-        <a class="linkk" href="">Замовити</a>
-        <a class="linkk" href="">Продати</a>
+        <a asp-controller="OrderCar" asp-action="Index" class="linkk" >Замовити</a>
+         <a asp-controller="SellCar" asp-action="Index" class="linkk" >Продати</a>
         <partial name="_LoginPartial"/>
     </nav>
 </header>

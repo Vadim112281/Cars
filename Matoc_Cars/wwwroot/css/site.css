@@ -20,3 +20,30 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.btn__logout{
+  isplay: inline-block;
+  text-align: center;
+  width: 100px;
+  height: 30px;
+  background: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 500;
+  margin-left: 40px;
+  text-decoration: none;
+  transition: .5s;
+}
+
+.btn__logout:hover{
+  background: white;
+  color: black;
+}
+
+.navigation{
+  display: flex;
+}

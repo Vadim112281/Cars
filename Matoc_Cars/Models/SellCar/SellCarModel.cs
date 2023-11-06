@@ -15,4 +15,6 @@ public class SellCarModel
     public int Price { get; set; }
     public string Description { get; set; }
     public int Mileage { get; set; }
+    public string User { get; set; }
+
 }

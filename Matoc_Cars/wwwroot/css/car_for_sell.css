@@ -16,7 +16,7 @@
 
 .sell__title{
     color: #fff;
-    font-size: 50px;
+    font-sizse: 50px;
     font-weight: 900;
     letter-spacing: 0.1em;
     text-shadow: 0 0 10px black,
@@ -132,7 +132,7 @@
     position: relative;
     top: 9px;
     right: -130px;
-    padding-top: 8px;
+    padding-top: 0px;
     text-align: center;
 }
 
@@ -428,3 +428,38 @@
     transform: scale(1.05);
 }
 
+.container__sell{
+    display: flex;
+}
+
+
+.detail__sell{
+    border-radius: 15px;
+    border: 7px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 1px 1px 4px rgba(14, 14, 14, 0.4);
+    height: 600px;
+    width: 1300px;
+    margin-top: 80px;
+    /*background-image: url("../css/Photo/lexus2.jpg"); */
+    background: transparent;
+    background-size: cover;
+    background-position: center;
+}
+
+.detail__title{
+    color: #fff;
+    font-sizse: 50px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px black,
+    0 0 20px white,
+    0 0 40px black,
+    0 0 80px black,
+    0 0 120px black;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.category__container{
+    display: flex;
+}
